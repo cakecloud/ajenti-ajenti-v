@@ -1,6 +1,8 @@
 apt update && apt-get upgrade -y
 
-wget -O- https://raw.github.com/ajenti/ajenti/1.x/scripts/install-ubuntu.sh | sudo sh
+wget http://repo.ajenti.org/debian/key -O- | sudo apt-key add -
+echo "deb http://repo.ajenti.org/ng/debian main main ubuntu" | sudo tee -a /etc/apt/sources.list
+apt-get update && sudo apt-get install ajenti
 service ajenti restart
 
 apt-get install -y --allow-unauthenticated software-properties-common curl nano vim wget git tar unzip tmux ncdu ranger htop 
