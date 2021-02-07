@@ -1,13 +1,13 @@
 apt update && apt-get upgrade -y
 
+apt-get install -y --allow-unauthenticated software-properties-common curl nano vim wget git tar unzip tmux ncdu ranger htop gnupg
+add-apt-repository ppa:ondrej/php -y
+apt-get update
+
 wget http://repo.ajenti.org/debian/key -O- | sudo apt-key add -
 echo "deb http://repo.ajenti.org/ng/debian main main ubuntu" | sudo tee -a /etc/apt/sources.list
 apt-get update && sudo apt-get install ajenti
 service ajenti restart
-
-apt-get install -y --allow-unauthenticated software-properties-common curl nano vim wget git tar unzip tmux ncdu ranger htop 
-add-apt-repository ppa:ondrej/php -y
-apt-get update
 
 apt-get install -y mariadb-server mariadb-client redis-server openvpn fail2ban
 dpkg --configure -a
