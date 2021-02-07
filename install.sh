@@ -94,7 +94,7 @@ apt-get install -yq --allow-unauthenticated php-fpm php-mbstring php-cgi php-cli
         php-tidy php-opcache php-json php-bz2 php-readline php-sybase \
         php-intl php-sqlite3 php-ldap php-xml php-zip -yf
 	
-add-apt-repository ppa:gslin/dehydrated -y && apt-get update && apt-get install -y dehydrated 
+apt-get update && apt-get install -y dehydrated 
 	
 sed -i "s/upload_max_filesize = 2M/upload_max_filesize = 5000M/" /etc/php/7.1/fpm/php.ini \
 && sed -i "s/post_max_size = 8M/post_max_size = 5000M/" /etc/php/7.1/fpm/php.ini \
