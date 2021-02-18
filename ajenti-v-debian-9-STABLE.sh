@@ -20,10 +20,8 @@ dpkg -i python-imaging_4.1.1-3build2_all.deb
 apt-get -yq install ajenti-v ajenti-v-nginx ajenti-v-mysql ajenti-v-php7.4-fpm ajenti-v-ftp-pureftpd php7.4-mysql
 service ajenti restart
 
-rm -rf /usr/local/lib/python2.7/dist-packages/urllib3
-rm -rf /usr/local/lib/python2.7/dist-packages/urllib3-1.26.3.dist-info
-rm -rf /usr/local/lib/python3.5/dist-packages/urllib3
-rm -rf /usr/local/lib/python3.5/dist-packages/urllib3-1.26.3.dist-info
+rm -rf /usr/local/lib/python2.7/dist-packages/urllib3*
+rm -rf /usr/local/lib/python3.5/dist-packages/urllib3*
 apt-get install -yq python3-pip python-pip wget curl git 
 pip install pip==9.0.1
 pip install requests==2.19.0
