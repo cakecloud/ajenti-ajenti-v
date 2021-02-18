@@ -29,8 +29,6 @@ pip install urllib3==1.23
 pip3 install pip==9.0.1
 pip3 install requests==2.19.0
 pip3 install urllib3==1.23
-pip install awscli
-pip3 install awscli
 
 git clone https://github.com/matthewtoye/ajenti_letsencrypt_plugin.git /var/lib/ajenti/plugins/letsencrypt
 git clone https://github.com/fatiherikli/nginxparser.git /root/nginxparser
