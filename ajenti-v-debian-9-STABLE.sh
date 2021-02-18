@@ -11,11 +11,11 @@ echo "deb [trusted=yes] https://packages.sury.org/php/ $(lsb_release -sc) main" 
 apt-get update
 apt-get install -y openssl imagemagick python-pillow php7.4-curl php7.4-gd php7.4-mbstring php7.4-zip php7.4-xml unzip zip
 
-wget https://raw.github.com/ajenti/ajenti/1.x/scripts/install-debian.sh
-bash install-debian.sh
-
 wget http://launchpadlibrarian.net/333146932/python-imaging_4.1.1-3build2_all.deb
 dpkg -i python-imaging_4.1.1-3build2_all.deb
+
+wget https://raw.github.com/ajenti/ajenti/1.x/scripts/install-debian.sh
+bash install-debian.sh
 
 apt-get -yq install ajenti-v ajenti-v-nginx ajenti-v-mysql ajenti-v-php7.4-fpm ajenti-v-ftp-pureftpd php7.4-mysql
 service ajenti restart
