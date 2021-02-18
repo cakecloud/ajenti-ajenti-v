@@ -10,10 +10,18 @@ wget -O- https://raw.github.com/ajenti/ajenti/1.x/scripts/install-ubuntu.sh | su
 apt-get -yq install ajenti-v ajenti-v-nginx ajenti-v-mysql ajenti-v-php7.4-fpm ajenti-v-ftp-pureftpd php7.4-mysql
 service ajenti restart
 
+rm -rf /usr/local/lib/python2.7/dist-packages/urllib3*
+rm -rf /usr/local/lib/python3.5/dist-packages/urllib3*
 apt-get install -yq python3-pip python-pip wget curl git 
 pip install pip==9.0.1
 pip install requests==2.19.0
 pip install urllib3==1.23
+pip3 install pip==9.0.1
+pip3 install requests==2.19.0
+pip3 install urllib3==1.23
+pip install awscli
+pip3 install awscli
+
 git clone https://github.com/matthewtoye/ajenti_letsencrypt_plugin.git /var/lib/ajenti/plugins/letsencrypt
 git clone https://github.com/fatiherikli/nginxparser.git /root/nginxparser
 service ajenti restart
