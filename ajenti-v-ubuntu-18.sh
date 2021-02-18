@@ -3,7 +3,7 @@ apt-get update
 apt-get install software-properties-common -y
 add-apt-repository -y ppa:ondrej/php
 apt-get update
-apt-get install -y openssl imagemagick python-pillow php7.4-curl php7.4-gd php7.4-mbstring php7.4-zip php7.4-xml unzip zip
+apt-get install -y openssl ufw imagemagick python-pillow php7.4-curl php7.4-gd php7.4-mbstring php7.4-zip php7.4-xml unzip zip
 wget http://launchpadlibrarian.net/333146932/python-imaging_4.1.1-3build2_all.deb
 dpkg -i python-imaging_4.1.1-3build2_all.deb
 wget -O- https://raw.github.com/ajenti/ajenti/1.x/scripts/install-ubuntu.sh | sudo sh
